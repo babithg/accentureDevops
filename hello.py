@@ -1,7 +1,8 @@
-import os
+import subprocess as sbp
 print ("Hello Word from pavans project forked by Babith")
 print("**"*10)
 print("Script running with details")
-print(os.system('top -n 1'))
+result = sbp.check_output('top -n 1', shell=True)
+print(result)
 print("**"*10)
 
