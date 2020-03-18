@@ -5,7 +5,7 @@ print("**"*30)
 print("Script running with details")
 try:
 	result = sbp.check_output('top -n 1', stderr = sbp.STDOUT, shell=True)
-except subprocess.CalledProcessError as e:
+except sbp.CalledProcessError as e:
 	raise RuntimeError("command '{}' return with error (code {}): {}".format(e.cmd, e.returncode, e.output))
 
 print("**"*30)
