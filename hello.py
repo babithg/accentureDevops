@@ -3,7 +3,11 @@ import subprocess as sbp
 print ("Hello Word from pavans project forked by Babith")
 print("**"*30)
 print("Script running with details")
-result = sbp.check_output('top -n 1', stderr = sbp.STDOUT, shell=True)
+try:
+	result = sbp.check_output('top -n 1', stderr = sbp.STDOUT, shell=True)
+except subprocess.CalledProcessError as e:
+	raise RuntimeError("command '{}' return with error (code {}): {}".format(e.cmd, e.returncode, e.output))
+
 print("**"*30)
 print(result)
 print("**"*30)
