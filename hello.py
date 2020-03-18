@@ -8,7 +8,7 @@ try:
 except sbp.CalledProcessError as e:
 	raise RuntimeError("command '{}' return with error (code {}): {}".format(e.cmd, e.returncode, e.output))
 
-print("**"*30)
+print("***"*30)
 print(result)
-print("**"*30)
+print("***"*30)
 
