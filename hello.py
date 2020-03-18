@@ -4,7 +4,7 @@ print ("Hello Word from pavans project forked by Babith")
 print("**"*30)
 print("Script running with details")
 try:
-	result = sbp.check_output('top -n 1', stderr = sbp.STDOUT, shell=True)
+	result = "result got" ##sbp.check_output('top -n 1', stderr = sbp.STDOUT, shell=True)
 except sbp.CalledProcessError as e:
 	raise RuntimeError("command '{}' return with error (code {}): {}".format(e.cmd, e.returncode, e.output))
 
